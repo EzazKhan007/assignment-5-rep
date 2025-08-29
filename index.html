@@ -13,24 +13,24 @@
 </head>
 <body>
     <header>
-        <nav class=" max-w-[1920px] w-full h-[100px] flex justify-between items-center pt-6 pr-[60px] pb-6 pl-[60px]">
+        <nav class=" max-w-[1920px] w-full h-[70px] md:h-[100px] flex justify-between items-center pt-6 pr-5 md:pr-[60px] pb-6 pl-5 md:pl-[60px]">
          <div class="flex items-center gap-2">
-             <img class="max-[198px] w-full" src="./assets/Logo.svg" alt="">
-              
+             <img class="max-w-[100px] md:max-w-[198px] w-full" src="./assets/Logo.svg" alt="">
+            
          </div>
 
-         <div class="flex gap-5"">
-            <button class="btn    bg-[#41ff6b1a] rounded-3xl flex p-3">
+         <div class="flex gap-3">
+            <button class="btn max-md:text-[12px] bg-[#41ff6b1a] rounded-xl md:rounded-3xl flex max-md:py-[2px] max-md:px-2  p-3 max-md:p-1">
                 <span id="loveCount">0</span>
-                <img class="max-w-[30px] w-full" src="./assets/heart.png" alt="">
+                <img class="max-w-[20px] md:max-w-[30px] w-full" src="./assets/heart.png" alt="">
             </button>
 
-            <button class="btn  bg-[#41ff6b1a]  rounded-3xl flex p-3">
-                <span id="coin-btn">100</span>
-                <img class="max-w-[30px] w-full" src="./assets/coin.png" alt="">
+            <button class="btn max-md:text-[12px] bg-[#41ff6b1a]  rounded-3xl flex p-3">
+                <span  id="coinTotal">100</span>
+                <img class="max-w-[20px] md:max-w-[30px] w-full" src="./assets/coin.png" alt="">
             </button>
 
-            <button class="btn btn-active btn-success bg-[#00A63E] text-[#FFFFFF] rounded-3xl">2 Copy</button>
+            <button  class="btn btn-active max-md:text-[12px] btn-success bg-[#00A63E] text-[#FFFFFF] rounded-3xl"><span id="showCopyCountNumber">0</span> Copy</button>
          </div>
     </nav>
     </header>
@@ -40,16 +40,16 @@
         <section>
             <div class="flex flex-col items-center bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] px-[60px] py-4">
                 <img class="max-w-[91px]" src="./assets/logo-dark.png" alt="">
-                <h1 class="font-bold text-[40px] text-white">Emergency Service Directory</h1>
-                <p class="font-semibold text-xl text-white">Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</p>
+                <h1 class="font-bold text-[40px] max-md:text-[25px] max-md:text-center text-white">Emergency Service Directory</h1>
+                <p class="font-semibold text-xl text-white  max-md:text-[16px] max-md:text-center">Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</p>
             </div>
         </section>
 
         <!-- Hotline container section -->
-         <section class="w-11/12 mx-auto py-10 grid grid-cols-12 gap-8">
-            <div class=" col-span-9">
-                 <div class="grid grid-cols-3 gap-[30px]">
-                       <div class="p-8 shadow-md bg-white rounded-[12px]  ">
+         <section class="w-11/12 mx-auto py-10 md:grid grid-cols-12 gap-8">
+            <div class="  col-span-9">
+                 <div class="grid grid-cols-1 md:grid-cols-3 gap-[30px]">
+                       <div class="p-8 shadow-md bg-white rounded-[12px] card ">
                            <div class="flex justify-between items-center">
                              <img class="bg-[#FFE3E2] max-w-[60px] w-full rounded-2xl p-[14px]" src="./assets/emergency.png" alt="">
                              <button onclick="increaseLove()"  class=" btn-square ">
@@ -57,21 +57,21 @@
                                 </button>
                            </div>
                            <div>
-                               <h2 class="font-bold text-[24px]">National Emergency Number</h2>
-                               <p class="">National Emergency</p>
-                               <h2 class="font-bold text-[32px] mt-6">999</h2>
+                               <h2 class="font-bold text-[24px] ">National Emergency Number</h2>
+                               <p class="service-title">National Emergency</p>
+                               <h2 class="number font-bold text-[32px] mt-6 ">999</h2>
                                <p class="bg-slate-300 max-w-[53px] py-[6px]
                                px-4 rounded-full mb-6">All</p>
                                <div class="grid grid-cols-2 gap-1">
-                                   <button class="btn btn-outline rounded-2xl"><i class="fa-regular fa-copy"></i>Copy</button>
-                                   <button class="btn btn-active btn-success bg-[#00A63E] text-[#FFFFFF] rounded-2xl"><i class="fa-solid fa-phone"></i>Call</button>
+                                   <button class="copy-btn btn btn-outline rounded-2xl"><i class="fa-regular fa-copy"></i>Copy</button>
+                                   <button class="btn btn-active btn-success bg-[#00A63E] text-[#FFFFFF] rounded-2xl call-btn"><i class="fa-solid fa-phone"></i>Call</button>
 
                                </div>
                                
                            </div>
 
                        </div>
-                       <div class="p-8 shadow-md bg-white rounded-[12px]  ">
+                       <div class="p-8 shadow-md bg-white rounded-[12px] card ">
                            <div class="flex justify-between items-center">
                              <img class="bg-[#DFEFFF] max-w-[60px] w-full rounded-2xl p-[14px]" src="./assets/police.png" alt="">
                              <button onclick="increaseLove()" class=" btn-square">
@@ -80,20 +80,20 @@
                            </div>
                            <div>
                                <h2 class="font-bold text-[24px]">Police Helpline Number</h2>
-                               <p class="">Police</p>
-                               <h2 class="font-bold text-[32px] mt-6">999</h2>
+                               <p class="service-title">Police</p>
+                               <h2 class="number font-bold text-[32px] mt-6">999</h2>
                                <p class="bg-slate-300 max-w-[79px] py-[6px]
                                px-4 rounded-full mb-6 i">Police</p>
                                <div class="grid grid-cols-2 gap-1">
-                                   <button class="btn btn-outline rounded-2xl"><i class="fa-regular fa-copy"></i>Copy</button>
-                                   <button class="btn btn-active btn-success bg-[#00A63E] text-[#FFFFFF] rounded-2xl"><i class="fa-solid fa-phone"></i>Call</button>
+                                   <button class="copy-btn btn btn-outline rounded-2xl"><i class="fa-regular fa-copy"></i>Copy</button>
+                                   <button class=" call-btn btn btn-active btn-success bg-[#00A63E] text-[#FFFFFF] rounded-2xl"><i class="fa-solid fa-phone "></i>Call</button>
 
                                </div>
                                
                            </div>
 
                        </div>
-                       <div class="p-8 shadow-md bg-white rounded-[12px] ">
+                       <div class="p-8 shadow-md bg-white rounded-[12px] card ">
                            <div class="flex justify-between items-center">
                              <img class="bg-[#FFE3E2] max-w-[60px] w-full rounded-2xl p-[14px]" src="./assets/fire-service.png" alt="">
                              <button onclick="increaseLove()" class=" btn-square">
@@ -102,20 +102,20 @@
                            </div>
                            <div>
                                <h2 class="font-bold text-[24px]">Fire Service Number</h2>
-                               <p class="">Fire Service</p>
-                               <h2 class="font-bold text-[32px] mt-6">999</h2>
+                               <p class="service-title">Fire Service</p>
+                               <h2 class="number font-bold text-[32px] mt-6">999</h2>
                                <p class="bg-slate-300 max-w-[61px] py-[6px]
                                px-4 rounded-full mb-6">Fire</p>
                                <div class="grid grid-cols-2 gap-1">
-                                   <button class="btn btn-outline rounded-2xl"><i class="fa-regular fa-copy"></i>Copy</button>
-                                   <button class="btn btn-active btn-success bg-[#00A63E] text-[#FFFFFF] rounded-2xl"><i class="fa-solid fa-phone"></i>Call</button>
+                                   <button class="copy-btn btn btn-outline rounded-2xl"><i class="fa-regular fa-copy"></i>Copy</button>
+                                   <button class="call-btn btn btn-active btn-success bg-[#00A63E] text-[#FFFFFF] rounded-2xl"><i class="fa-solid fa-phone"></i>Call</button>
 
                                </div>
                                
                            </div>
 
                        </div>
-                       <div class="p-8 shadow-md bg-white rounded-[12px]  ">
+                       <div class="p-8 shadow-md bg-white rounded-[12px] card ">
                            <div class="flex justify-between items-center">
                              <img class="bg-[#FFE3E2] max-w-[60px] w-full rounded-2xl p-[14px]" src="./assets/ambulance.png" alt="">
                              <button onclick="increaseLove()" class=" btn-square">
@@ -124,20 +124,20 @@
                            </div>
                            <div>
                                <h2 class="font-bold text-[24px]">Ambulance Service</h2>
-                               <p class="">Ambulance</p>
-                               <h2 class="font-bold text-[32px] mt-6">1994-999999</h2>
+                               <p class="service-title">Ambulance</p>
+                               <h2 class="number font-bold text-[32px] mt-6">1994-999999</h2>
                                <p class="bg-slate-300 max-w-[83px] py-[6px]
                                px-4 rounded-full mb-6">Health</p>
                                <div class="grid grid-cols-2 gap-1">
-                                   <button class="btn btn-outline rounded-2xl"><i class="fa-regular fa-copy"></i>Copy</button>
-                                   <button class="btn btn-active btn-success bg-[#00A63E] text-[#FFFFFF] rounded-2xl"><i class="fa-solid fa-phone"></i>Call</button>
+                                   <button class="copy-btn btn btn-outline rounded-2xl"><i class="fa-regular fa-copy"></i>Copy</button>
+                                   <button class="call-btn btn btn-active btn-success bg-[#00A63E] text-[#FFFFFF] rounded-2xl"><i class="fa-solid fa-phone"></i>Call</button>
 
                                </div>
                                
                            </div>
 
                        </div>
-                       <div class="p-8 shadow-md bg-white rounded-[12px]  ">
+                       <div class="p-8 shadow-md bg-white rounded-[12px] card ">
                            <div class="flex justify-between items-center">
                              <img class="bg-[#FFE3E2] max-w-[60px] w-full rounded-2xl p-[14px]" src="./assets/emergency.png" alt="">
                              <button onclick="increaseLove()" class=" btn-square">
@@ -146,20 +146,20 @@
                            </div>
                            <div>
                                <h2 class="font-bold text-[24px]">Women & Child Helpline</h2>
-                               <p class="">Women & Child Helpline</p>
-                               <h2 class="font-bold text-[32px] mt-6">109</h2>
+                               <p class="service-title">Women & Child Helpline</p>
+                               <h2 class="number font-bold text-[32px] mt-6">109</h2>
                                <p class="bg-slate-300 max-w-[68px] py-[6px]
                                px-4 rounded-full mb-6">Help</p>
                                <div class="grid grid-cols-2 gap-1">
-                                   <button class="btn btn-outline rounded-2xl"><i class="fa-regular fa-copy"></i>Copy</button>
-                                   <button class="btn btn-active btn-success bg-[#00A63E] text-[#FFFFFF] rounded-2xl"><i class="fa-solid fa-phone"></i>Call</button>
+                                   <button class="copy-btn btn btn-outline rounded-2xl"><i class="fa-regular fa-copy"></i>Copy</button>
+                                   <button class="call-btn btn btn-active btn-success bg-[#00A63E] text-[#FFFFFF] rounded-2xl"><i class="fa-solid fa-phone"></i>Call</button>
 
                                </div>
                                
                            </div>
 
                        </div>
-                       <div class="p-8 shadow-md bg-white rounded-[12px]  ">
+                       <div class="p-8 shadow-md bg-white rounded-[12px] card ">
                            <div class="flex justify-between items-center">
                              <img class="bg-[#FFE3E2] max-w-[60px] w-full rounded-2xl p-[14px]" src="./assets/emergency.png" alt="">
                              <button onclick="increaseLove()" class=" btn-square">
@@ -168,20 +168,20 @@
                            </div>
                            <div>
                                <h2 class="font-bold text-[24px]">Anti-Corruption Helpline</h2>
-                               <p class="">Anti-Corruption</p>
-                               <h2 class="font-bold text-[32px] mt-6">106</h2>
+                               <p class="service-title">Anti-Corruption</p>
+                               <h2 class="number font-bold text-[32px] mt-6">106</h2>
                                <p class="bg-slate-300 max-w-[73px] py-[6px]
                                px-4 rounded-full mb-6">Govt.</p>
                                <div class="grid grid-cols-2 gap-1">
-                                   <button class="btn btn-outline rounded-2xl"><i class="fa-regular fa-copy"></i>Copy</button>
-                                   <button class="btn btn-active btn-success bg-[#00A63E] text-[#FFFFFF] rounded-2xl"><i class="fa-solid fa-phone"></i>Call</button>
+                                   <button class="copy-btn btn btn-outline rounded-2xl"><i class="fa-regular fa-copy"></i>Copy</button>
+                                   <button class="call-btn btn btn-active btn-success bg-[#00A63E] text-[#FFFFFF] rounded-2xl"><i class="fa-solid fa-phone"></i>Call</button>
 
                                </div>
                                
                            </div>
 
                        </div>
-                       <div class="p-8 shadow-md bg-white rounded-[12px]  ">
+                       <div class="p-8 shadow-md bg-white rounded-[12px] card ">
                            <div class="flex justify-between items-center">
                              <img class="bg-[#FFE3E2] max-w-[60px] w-full rounded-2xl p-[14px]" src="./assets/emergency.png" alt="">
                              <button onclick="increaseLove()" class=" btn-square">
@@ -190,20 +190,20 @@
                            </div>
                            <div>
                                <h2 class="font-bold text-[24px]">Electricity Helpline</h2>
-                               <p class="">Electricity Outage</p>
-                               <h2 class="font-bold text-[32px] mt-6">16216</h2>
+                               <p class="service-title">Electricity Outage</p>
+                               <h2 class="number font-bold text-[32px] mt-6">16216</h2>
                                <p class="bg-slate-300 max-w-[109px] py-[6px]
                                px-4 rounded-full mb-6">Electricity</p>
                                <div class="grid grid-cols-2 gap-1">
-                                   <button class="btn btn-outline rounded-2xl"><i class="fa-regular fa-copy"></i>Copy</button>
-                                   <button class="btn btn-active btn-success bg-[#00A63E] text-[#FFFFFF] rounded-2xl"><i class="fa-solid fa-phone"></i>Call</button>
+                                   <button class="copy-btn btn btn-outline rounded-2xl"><i class="fa-regular fa-copy"></i>Copy</button>
+                                   <button class="call-btn btn btn-active btn-success bg-[#00A63E] text-[#FFFFFF] rounded-2xl"><i class="fa-solid fa-phone"></i>Call</button>
 
                                </div>
                                
                            </div>
 
                        </div>
-                       <div class="p-8 shadow-md bg-white rounded-[12px]  ">
+                       <div class="p-8 shadow-md bg-white rounded-[12px] card ">
                            <div class="flex justify-between items-center">
                              <img class="bg-[#FFE3E2] max-w-[60px] w-full rounded-2xl p-[14px]" src="./assets/emergency.png" alt="">
                              <button onclick="increaseLove()" class=" btn-square">
@@ -212,20 +212,20 @@
                            </div>
                            <div>
                                <h2 class="font-bold text-[24px]">Brac Helpline</h2>
-                               <p class="">Brac</p>
-                               <h2 class="font-bold text-[32px] mt-6">16445</h2>
+                               <p class="service-title">Brac</p>
+                               <h2 class="number font-bold text-[32px] mt-6">16445</h2>
                                <p class="bg-slate-300 max-w-[69px] py-[6px]
                                px-4 rounded-full mb-6">NGO</p>
                                <div class="grid grid-cols-2 gap-1">
-                                   <button class="btn btn-outline rounded-2xl"><i class="fa-regular fa-copy"></i>Copy</button>
-                                   <button class="btn btn-active btn-success bg-[#00A63E] text-[#FFFFFF] rounded-2xl"><i class="fa-solid fa-phone"></i>Call</button>
+                                   <button class="copy-btn btn btn-outline rounded-2xl"><i class="fa-regular fa-copy"></i>Copy</button>
+                                   <button class="call-btn btn btn-active btn-success bg-[#00A63E] text-[#FFFFFF] rounded-2xl"><i class="fa-solid fa-phone"></i>Call</button>
 
                                </div>
                                
                            </div>
 
                        </div>
-                       <div class="p-8 shadow-md bg-white rounded-[12px]  ">
+                       <div class="p-8 shadow-md bg-white rounded-[12px] card ">
                            <div class="flex justify-between items-center">
                              <img class="bg-[#FFE3E2] max-w-[60px] w-full rounded-2xl p-[14px]" src="./assets/emergency.png" alt="">
                              <button onclick="increaseLove()" class=" btn-square">
@@ -234,13 +234,13 @@
                            </div>
                            <div>
                                <h2 class="font-bold text-[24px]">Bangladesh Railway Helpline</h2>
-                               <p class="">Bangladesh Railway</p>
-                               <h2 class="font-bold text-[32px] mt-6">163</h2>
+                               <p class="service-title">Bangladesh Railway</p>
+                               <h2 class="number font-bold text-[32px] mt-6">163</h2>
                                <p class="bg-slate-300 max-w-[79px] py-[6px]
                                px-4 rounded-full mb-6">Travel</p>
                                <div class="grid grid-cols-2 gap-1">
-                                   <button class="btn btn-outline rounded-2xl"><i class="fa-regular fa-copy"></i>Copy</button>
-                                   <button class="btn btn-active btn-success bg-[#00A63E] text-[#FFFFFF] rounded-2xl"><i class="fa-solid fa-phone"></i>Call</button>
+                                   <button class="copy-btn btn btn-outline rounded-2xl"><i class="fa-regular fa-copy"></i>Copy</button>
+                                   <button class="call-btn btn btn-active btn-success bg-[#00A63E] text-[#FFFFFF] rounded-2xl"><i class="fa-solid fa-phone"></i>Call</button>
 
                                </div>
                                
@@ -250,10 +250,14 @@
                  </div>
             </div>
 
-            <div class="col-span-3 p-6 bg-white">
+            <div class="col-span-3 p-6 bg-white max-md:mt-5">
                 <div class="flex justify-between items-center">
                     <h1 class="font-semibold"><i class="fa-regular fa-clock"></i>  Call History</h1>
-                    <button class="btn btn-active btn-success bg-[#00A63E] text-[#FFFFFF] rounded-3xl">Clear</button>
+                    <button id="clear-btn" class="btn btn-active btn-success bg-[#00A63E] text-[#FFFFFF] rounded-3xl">Clear</button>
+                    
+                </div>
+
+                <div id="historyContainer">
                 </div>
             </div>
 
